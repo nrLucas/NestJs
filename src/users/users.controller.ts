@@ -6,6 +6,7 @@ import { User } from './entities/user.entity';
 @Controller('users')
 export class UsersController {
   constructor(private usersService: UsersService) {}
+
   @Get()
   getUsers(): User[] {
     return this.usersService.findAll();
